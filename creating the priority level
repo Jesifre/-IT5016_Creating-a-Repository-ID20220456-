@@ -1,0 +1,9 @@
+#this method is gonna to indicate the level of priority
+    def escalate_ticket(self):
+            if self.priority == "High":
+               self.priority = "Urgent"
+            elif self.priority == "Medium":
+                self.priority ="High"
+            elif self.priority == "Low":
+                self.priority ="Medium"
+   
