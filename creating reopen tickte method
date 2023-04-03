@@ -1,0 +1,5 @@
+#The reopen_ticket method reopens a resolved ticket and changes its status to "Reopened".
+    def reopen_ticket(self):
+        self.status = "Reopened"
+        Ticket.tickets_resolved -= 1
+        Ticket.tickets_open += 1
