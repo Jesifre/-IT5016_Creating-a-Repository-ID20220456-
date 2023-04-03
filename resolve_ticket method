@@ -1,0 +1,9 @@
+ #The resolve_ticket method resolves a ticket and changes its status to "Closed".
+
+    def resolve_ticket(self):
+        if "Password Change" in self.issue_description: #If the issue description contains the words "Password Change"
+            new_password = self.staff_id[:2] + self.creator.name[:3]  #it generates a new password for the staff member based on their ID and name.
+            self.response = f"New password generated: {new_password}"
+        self.status = "Closed"
+        Ticket.tickets_resolved += 1
+        Ticket.tickets_open -= 1
