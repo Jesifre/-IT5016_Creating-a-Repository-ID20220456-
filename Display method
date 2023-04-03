@@ -1,0 +1,9 @@
+#The display_ticket_info method prints the information of a ticket.
+    def display_ticket_info(self):
+        print("Ticket Number:", self.ticket_number)
+        print("Ticket Creator:")
+        self.creator.display_info()
+        print("Description:", self.issue_description)
+        print("Response:", self.response)
+        print("Ticket Status:", self.status)
+        print("level priority:", self.priority)
