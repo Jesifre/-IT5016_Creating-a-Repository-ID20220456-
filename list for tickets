@@ -1,0 +1,35 @@
+# Initialize lists to store ticket information
+tickets = []
+ticket_count = 2000
+resolved_count = 0
+open_count = 0
+
+
+# creating an infinite loop until the user decides to exit
+while True:
+    # request ticket information from the user.
+    print("Hi, please introduce the follow information to create a new ticket")
+
+    # Function to create a new ticket
+    def create_ticket():
+        global ticket_count, open_count
+        personal_id = input("Enter staff id: ")
+        creator_name = input("Enter the name of the ticket creator: ")
+        email = input("Enter email address: ")
+        description = input("Enter the problem description: ")
+        ticket = {
+            "number": ticket_count,
+            "name": creator_name,
+            "personal_id": personal_id,
+            "email": email,
+            "description": description,
+            "response": "Not yet provided",
+            "status": "Open"
+        }
+        # add the dictionary to the ticket list
+        tickets.append(ticket)
+        ticket_count += 1
+        open_count += 1
+        print('a new ticket has been generated')
+
+    create_ticket()
