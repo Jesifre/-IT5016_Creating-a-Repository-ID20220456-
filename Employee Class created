@@ -1,0 +1,13 @@
+ created another class, that It will be included in the method __init__ to employee's info to create
+#the new password ( if it required)
+
+class Employee:
+    def __init__(self, name, id_number, email):
+        self.name = name
+        self.id_number = id_number
+        self.email = email
+
+    def display_info(self):
+        print("Name:", self.name)
+        print("ID number:", self.id_number)
+        print("Email:", self.email)
