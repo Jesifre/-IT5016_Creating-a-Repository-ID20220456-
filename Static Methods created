@@ -1,0 +1,7 @@
+#The ticket_stats method is a static method that prints the current ticket statistics.
+    @staticmethod
+    def ticket_stats():
+        print("Tickets Created:", Ticket.tickets_created)
+        print("Tickets Resolved:", Ticket.tickets_resolved)
+        print("Tickets To Solve:", Ticket.tickets_open) 
+        
